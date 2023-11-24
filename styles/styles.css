@@ -5,6 +5,13 @@
 }
 
 :root {
+  font-size: 1.125rem;
+}
+
+/* Light Color Scheme */
+:root,
+:root[data-force-color-mode="light"] {
+	color-scheme: light dark;
   --lightgreen: #C4CEA1;
   --green: #606C38;
   --darkgreen: #283618;
@@ -12,6 +19,31 @@
   --lightbrown: #DDA15E;
   --darkbrown: #BC6C25;
   --red: #C7421A;
+  --text-color: #000;
+}
+
+/* Dark Color Scheme */
+@media (prefers-color-scheme: dark) {
+	:root {
+    --darkgreen: #C4CEA1;
+    --green: #606C38;
+    --lightgreen: #283618;
+    --cream: #000;
+    --lightbrown: #DDA15E;
+    --darkbrown: #BC6C25;
+    --red: #C7421A;
+    --text-color: #fff;
+	}
+}
+:root[data-force-color-mode="dark"] {
+  --lightgreen: #C4CEA1;
+  --green: #606C38;
+  --darkgreen: #283618;
+  --cream: #FEFAE0;
+  --lightbrown: #DDA15E;
+  --darkbrown: #BC6C25;
+  --red: #C7421A;
+  --text-color: #fff;
 }
 
 body {
@@ -28,9 +60,9 @@ body {
 aside {
     width: 20%;
     max-width: 30rem;
-    background-color: var(--green);
+    background-color: var(--lightgreen);
     /* border-right: 2px solid var(--darkbrown); */
-    color: black;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,14 +81,17 @@ aside > header {
 }
 
 .logo-text-container > span:nth-of-type(1) {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
-header > img {
-  width: 3rem;
-  height: 3rem;
+header img {
+  width: 3.5rem;
+  height: 3.5rem;
   margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
 }
 
 nav {
@@ -71,12 +106,20 @@ nav a {
   text-decoration: none;
   color: var(--darkgreen);
   /* background-color: var(--darkgreen); */
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: block;
   padding: 0.5rem 1em;
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
   background-color: var(--lightgreen);
-  border: 1px solid var(--darkgreen);
-  border-bottom: 4px solid var(--darkgreen);
+  transition: 0.2s;
+}
+
+nav a:not(.active):hover {
+  box-shadow: 0px 3px 3px var(--darkgreen);
+}
+
+nav a.active {
+  background-color: var(--darkgreen);
+  color: var(--cream);
 }
