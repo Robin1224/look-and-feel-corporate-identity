@@ -6,6 +6,10 @@
 
 :root {
   font-size: 1.125rem;
+
+  --btn-radius: 2.5em;
+  --sec-radius: .25em;
+  --icon-radius: 3.5em;
 }
 
 /* Light Color Scheme */
