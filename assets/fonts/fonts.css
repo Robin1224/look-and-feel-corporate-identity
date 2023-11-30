@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Halton bold';
+  src: url(./halton-bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Halton';
+  src: url(./halton-regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Halton light';
+  src: url(./halton-light.woff2) format('woff2');
+}

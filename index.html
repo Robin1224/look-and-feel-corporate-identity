@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" href="./assets/fonts/fonts.css" rel="stylesheet" />
     <link type="text/css" href="./styles/styles.css" rel="stylesheet" />
     <title>CrossMarx Foot & Handprint</title>
   </head>
   <body>
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <label class="hamb" for="side-menu">
+      <span class="hamb-line"></span>
+    </label>
     <aside>
       <header>
         <img src="assets/logo.png" alt="CrossMarx Logo" />
@@ -26,6 +32,39 @@
         </ul>
       </nav>
     </aside>
-    <main></main>
+    <main>
+      <h1>Dashboard</h1>
+
+      <div class="grid-container">
+        <section class="indicators">
+          <div class="handprint-indicator">
+            <h3>Handprint</h3>
+            <!-- Progress bar -->
+            <div class="chart">
+              <div class="bar bar-handprint"></div>
+              <span id="value1">68%</span>
+            </div>
+          </div>
+          <div class="footprint-indicator">
+            <h3>Footprint</h3>
+            <!-- Progress bar -->
+            <div class="chart">
+              <div class="bar bar-footprint"></div>
+              <span id="value2">34%</span>
+            </div>
+          </div>
+        </section>
+        <h2>
+          Ieder bedrijf maakt een bijdrage aan het milieu, maar ook ieder
+          bedrijf heeft een ecologisch voetafdruk. <br />
+          <br />
+          Doe nu de test en krijg inzicht over jouw foot- en handprint!
+        </h2>
+        <button class="meer-inzicht">Meer inzicht</button>
+        <button class="cta">Doe de test</button>
+      </div>
+    </main>
+
+    <script src="scripts/script.js" defer></script>
   </body>
 </html>
